@@ -1,0 +1,101 @@
+# Privacy Policy
+
+**Plate Forge** (package ID: `com.webstack.sportnotes`)  
+**Effective date:** 25 June 2026  
+**Contact:** [turslv18@gmail.com](mailto:turslv18@gmail.com)
+
+This Privacy Policy explains how Plate Forge (“we”, “us”, “the app”) handles information when you use our mobile application on Android and iOS.
+
+## 1. Summary
+
+- **Training data stays on your device.** Workout plans, sessions, goals, and progress are stored locally. We do not operate a user account server for the core app.
+- **Analytics and crash reports are optional.** You choose on first launch and can change the choice in Settings. We do not send exercise names, weights, reps, or training notes to analytics.
+- **The free version shows ads** served by Google AdMob. Where required by law, Google’s User Messaging Platform (UMP) asks for ad privacy choices separately from analytics.
+
+## 2. Information stored on your device
+
+The app stores the following locally on your phone or tablet (ObjectBox database and app files):
+
+- Workout plans, schedules, and completed training sessions
+- Custom exercises and exercise preferences
+- Training goals, gamification progress, and achievements
+- App settings (language, theme, units, rest timers, analytics preference)
+- Multiple training profiles (“accounts”) if you create them
+- Optional profile photos you choose for a training account (saved in app storage)
+
+This data is not uploaded to our servers as part of normal app use. Uninstalling the app or using in-app delete flows removes the corresponding local data.
+
+## 3. Optional usage analytics and crash reporting
+
+If you **allow analytics**, we use **Google Firebase Analytics** and **Firebase Crashlytics** to understand how the app is used and to fix crashes. Collection is disabled until you opt in (or until you enable the toggle in Settings → Privacy & legal).
+
+**Events we may send (examples):**
+
+- `onboarding_completed` — number of goals selected
+- `session_started` — source label and planned set count (numbers only)
+- `session_completed` — completed set count and exercise count (numbers only)
+- Crash and error diagnostics (stack traces, device/OS metadata)
+- Screen navigation in release builds (screen names, not training content)
+
+**We do not send:** exercise names, weights, reps, times, distances, workout notes, or other training content.
+
+If you choose **Continue without analytics**, Firebase Analytics and Crashlytics collection remain off.
+
+Google’s privacy information: [Google Privacy Policy](https://policies.google.com/privacy).
+
+## 4. Advertising (free version)
+
+Plate Forge may show **Google AdMob** advertisements:
+
+- A banner during idle/rest moments in an active workout
+- A skippable full-screen ad after you finish a workout (when ads are eligible)
+
+AdMob and its partners may collect device identifiers, ad interaction data, and similar information to deliver and measure ads, subject to your choices and applicable law. In the EEA, UK, and other regions where required, **Google UMP** presents ad privacy options. You can review ad privacy choices from Settings when Google requires it.
+
+Google AdMob information: [AdMob & user data](https://support.google.com/admob/answer/6128543).
+
+## 5. Permissions
+
+- **Camera / photo library** — only if you set a training account avatar from the camera or gallery. Images are stored locally.
+- **Internet** — used for ads, optional analytics/crash reporting, app update checks, and opening legal links. Core workout features work offline.
+
+## 6. Legal bases (EEA / UK / similar regions)
+
+- **Local training data:** processed on your device to provide the service you request; we do not receive it.
+- **Analytics and crash reporting:** your **consent** (you can withdraw it in Settings).
+- **Advertising:** your **consent** or other lawful basis as presented by Google UMP and applicable law.
+
+## 7. Data retention
+
+- Local training data remains until you delete it in the app, delete a training account, or uninstall the app.
+- Analytics and crash data retained by Google are governed by Google’s policies and your consent settings.
+
+## 8. Your rights
+
+Depending on your location, you may have rights to access, correct, delete, or restrict processing of personal data, or to object or withdraw consent.
+
+- **Training data:** manage or delete in the app (e.g. delete plans, accounts, or uninstall).
+- **Analytics:** toggle off in Settings → Privacy & legal → Usage analytics.
+- **Ads:** use Google’s ad privacy options when offered; a future paid “no ads” subscription may be offered separately.
+
+To exercise rights related to data processed by Google, see Google’s tools and policies. For questions about this app, email [turslv18@gmail.com](mailto:turslv18@gmail.com).
+
+## 9. Children
+
+Plate Forge is not directed at children under 13 (or the minimum age required in your country). We do not knowingly collect personal information from children.
+
+## 10. International transfers
+
+Firebase and AdMob may process data on servers outside your country, including the United States, under Google’s standard contractual and security measures.
+
+## 11. Changes
+
+We may update this policy. The effective date at the top will change. Continued use after an update means you accept the revised policy where permitted by law.
+
+## 12. Contact
+
+Questions about this Privacy Policy: [turslv18@gmail.com](mailto:turslv18@gmail.com)
+
+---
+
+[Terms of Service](terms-of-service.md)
