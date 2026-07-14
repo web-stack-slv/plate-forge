@@ -1,7 +1,7 @@
 # Terms of Service
 
 **Plate Forge** (package ID: `com.webstack.plateforge`)  
-**Effective date:** 26 June 2026  
+**Effective date:** 14 July 2026  
 **Contact:** [turslv18@gmail.com](mailto:turslv18@gmail.com)
 
 These Terms of Service (“Terms”) govern your use of the Plate Forge mobile application (“the app”, “Service”). By installing or using the app, you agree to these Terms. If you do not agree, do not use the app.
@@ -34,12 +34,11 @@ The free version may display third-party advertisements (Google AdMob). Optional
 
 **Premium subscription** (monthly auto-renewable, product ID `premium_monthly` where configured):
 
-- Removes ads and unlocks premium features shown in the app (e.g. JSON export, mentee training report, higher training account limit, **cloud backup and restore**).
+- Removes ads and unlocks premium features shown in the app (mentee training report, higher training account limit).
 - Payment is charged to your Google Play or App Store account. Subscriptions **auto-renew** unless cancelled at least 24 hours before the end of the current period.
 - Manage or cancel in your store account subscription settings. Refunds follow the store’s policies.
 - **Restore purchases** is available in Settings when you reinstall on the same store account.
 - **Promo codes** may grant temporary premium access; codes are limited-use and may expire.
-- **Cloud restore (premium):** when enabled, the app may upload a backup of your local training data to Firebase and let you **Restore data from cloud** on another install signed in with the same anonymous Firebase user. Backups are not guaranteed; keep your own export copies for important data. Automatic merge of remote changes without your confirmation is not offered in the current version.
 
 ## 7. Intellectual property
 
