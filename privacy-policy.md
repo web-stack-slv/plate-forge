@@ -1,7 +1,7 @@
 # Privacy Policy
 
 **Plate Forge** (package ID: `com.webstack.plateforge`)  
-**Effective date:** 26 June 2026  
+**Effective date:** 14 July 2026  
 **Contact:** [turslv18@gmail.com](mailto:turslv18@gmail.com)
 
 This Privacy Policy explains how Plate Forge (“we”, “us”, “the app”) handles information when you use our mobile application on Android and iOS.
@@ -11,7 +11,7 @@ This Privacy Policy explains how Plate Forge (“we”, “us”, “the app”)
 - **Training data stays on your device.** Workout plans, sessions, goals, and progress are stored locally. We do not operate a user account server for the core app.
 - **Analytics and crash reports are optional.** You choose on first launch and can change the choice in Settings. We do not send exercise names, weights, reps, or training notes to analytics.
 - **The free version shows ads** served by Google AdMob. Where required by law, Google’s User Messaging Platform (UMP) asks for ad privacy choices separately from analytics.
-- **Optional premium subscription** removes ads and unlocks coach–athlete cloud sync, a higher training-account cap, and mentee training reports. Purchases are processed by Google Play or the App Store, not by us directly.
+- **Optional premium subscription** removes ads, unlocks a higher training-account cap, and mentee training reports (local export). Purchases are processed by Google Play or the App Store, not by us directly.
 
 ## 2. Information stored on your device
 
@@ -23,33 +23,22 @@ The app stores the following locally on your phone or tablet (ObjectBox database
 - App settings (language, theme, units, rest timers, analytics preference)
 - Multiple training profiles (“accounts”) if you create them
 - Optional profile photos you choose for a training account (saved in app storage)
-- **Coach-tagged training data** on a mentee’s main account when linked to a coach (programs and sessions the coach manages, distinguished from personal programs that stay local-only)
 
-This data is not uploaded to our servers as part of normal offline use. **Personal** programs and sessions on a linked mentee account are not uploaded. Only **coach-tagged** rows may be written to the mentee-owned cloud shard when the athlete is connected to a coach and sync runs. Uninstalling the app or using in-app delete flows removes the corresponding local data.
+This data is not uploaded to our servers as part of normal offline use. Uninstalling the app or using in-app delete flows removes the corresponding local data.
 
-## 3. Optional online features (premium, coach linking, and promo codes)
+## 3. Optional online features (premium and promo codes)
 
-When you use premium, coach linking, or promo features, limited data is sent to **Google Firebase** (project `plate-forge`):
+When you use premium or promo features, limited data is sent to **Google Firebase** (project `plate-forge`):
 
-- **Firebase Authentication:** Google, Apple (when enabled), email/password, or anonymous sign-in for promo redemption. A stable user ID is used for subscription validation and coach–mentee sync when you sign in.
-- **Cloud Functions:** validate subscription purchases (when enabled) and redeem promo codes server-side.
+- **Firebase Authentication:** anonymous sign-in for subscription validation and promo redemption. A stable anonymous user ID is created automatically; there is no sign-in UI in the app.
+- **Cloud Functions:** validate subscription purchases (when enabled) and redeem promo codes server-side. Store purchase tokens or receipts may be sent for validation; we do not receive your payment card details.
 - **Cloud Firestore:**
-  - Promo code metadata and subscription records under `users/{uid}/subscription`
-  - **Coach–mentee shard** under `users/{menteeUid}/linkedAccounts/{linkId}/shard/current` — JSON snapshot of **coach-tagged** training data only (plans, sessions, schedule state managed by the linked coach). Personal programs on the mentee device are not included.
-  - Link metadata (`coachUid`, account IDs, `status`, bootstrap state) under `users/{menteeUid}/linkedAccounts/{linkId}`
-  - Invite documents under `invites/{token}` while a coach shares a link
+  - Subscription records under `users/{uid}/subscription`
   - **Legacy full-device backups** under `users/{uid}/backups/current` may exist from earlier builds or internal QA; this is **not** a current product feature and is not offered in the app UI for end users.
 
-**Free users** who do not use premium or coach linking do not upload training content to Firestore. Linked **free mentees** may push coach-tagged workouts to their own shard; **coach-side** cloud pull requires an active premium subscription on the coach’s main account.
+**Free users** who do not use premium do not upload training content to Firestore.
 
 Promo codes are created manually by the developer for testers or friends; they are not public self-service registration.
-
-### Coach linking and consent
-
-- A mentee must **accept** an invite before any coach-tagged data is shared.
-- While linked, the coach may manage coach-tagged programs; the mentee may train and log results on those programs.
-- **Revoke** or **disconnect** stops future shard writes. The coach may retain a local copy on their device.
-- If the coach’s **premium subscription ends**, cloud links are revoked on the coach’s next app launch (after confirmation); the mentee is notified that the coach link ended. Local training data on both devices remains unless the user deletes it.
 
 ## 4. Optional usage analytics and crash reporting
 
@@ -94,6 +83,7 @@ Google AdMob information: [AdMob & user data](https://support.google.com/admob/a
 ## 8. Data retention
 
 - Local training data remains until you delete it in the app, delete a training account, or uninstall the app.
+- Anonymous Firebase Auth ID and premium/promo records in Firestore remain until you use **Delete online data** in Settings or request deletion by email (see [account deletion](account-deletion.md)).
 - Analytics and crash data retained by Google are governed by Google’s policies and your consent settings.
 
 ## 9. Your rights
@@ -125,4 +115,4 @@ Questions about this Privacy Policy: [turslv18@gmail.com](mailto:turslv18@gmail.
 
 ---
 
-[Terms of Service](terms-of-service.md)
+[Terms of Service](terms-of-service.md) · [Delete your data](account-deletion.md)
