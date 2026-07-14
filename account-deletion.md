@@ -1,69 +1,68 @@
-# Delete your Plate Forge account and data
+# Delete your Plate Forge data
 
 **Plate Forge** (package ID: `com.webstack.plateforge`)  
-**Effective date:** 30 June 2026  
+**Effective date:** 14 July 2026  
 **Contact:** [turslv18@gmail.com](mailto:turslv18@gmail.com)
 
-This page explains how to delete your data in **Plate Forge**. Core workout features work offline; optional online features (sign-in, premium cloud backup, coach linking, promo codes) store limited data in **Google Firebase** (project `plate-forge`).
+Plate Forge does **not** offer sign-in accounts. Training profiles and workouts stay on your device. Optional online data is limited to anonymous premium or promo validation in **Google Firebase** (project `plate-forge`).
 
-## 1. Delete data on your device (no account required)
-
-You can remove local training data without signing in or contacting us:
+## 1. Delete data on your device (no contact required)
 
 1. Open **Plate Forge** → **Settings**.
-2. Delete individual workout plans, sessions, or training accounts you no longer need.
+2. Delete individual workout plans, sessions, or training profiles you no longer need.
 3. To remove **all** local app data: uninstall the app from your device.
 
 This removes workout plans, sessions, goals, settings, and profile photos stored only on your phone or tablet.
 
-## 2. Delete your online account (Firebase)
+## 2. Delete online data in the app (premium or promo)
 
-Use this if you signed in with **Google** or **email**, redeemed a **promo code**, used **premium cloud backup**, or used **coach–client linking**.
+If you used **premium** or redeemed a **promo code**, you can delete the small online record linked to this install:
 
-### Steps
+1. Open **Settings** → **Privacy & legal**.
+2. Tap **Delete online data**.
+3. Read the confirmation and confirm.
 
-1. (Optional) Open **Settings** → **Account** → **Sign out**.
-2. Email [turslv18@gmail.com](mailto:turslv18@gmail.com) from the address linked to your account (if any).
-3. Use subject line: **Plate Forge account deletion request**.
-4. Include the **email address** you used to sign in, or state that you used **Google Sign-In** with that email.
+This removes anonymous premium/promo records from Firebase for the current install. It does **not** delete workouts on your device and does **not** cancel Google Play or App Store billing.
+
+If you reinstalled the app or no longer have the same anonymous session, use the email option below.
+
+## 3. Email fallback (reinstall or help)
+
+Email [turslv18@gmail.com](mailto:turslv18@gmail.com) if in-app deletion is not available.
+
+1. Subject line: **Plate Forge data deletion request**
+2. Include one of:
+   - Google Play or App Store purchase email (premium)
+   - Promo code you redeemed (if known)
+   - Approximate date of purchase or redemption
 
 We will process verified requests within **30 days**.
 
-### What we delete
+### What we delete on request
 
-- Your **Firebase Authentication** account (Google or email sign-in, or anonymous ID if linked to your request)
-- **Cloud backup** data in Firestore (`users/{uid}/backups`)
-- **Subscription and promo** records in Firestore (`users/{uid}/subscription`)
-- **Coach–client link** metadata associated with your account, where applicable
+- **Firebase Authentication** anonymous ID (when identifiable)
+- **Subscription mirror** in Firestore (`users/{uid}/subscription`)
+- **Promo redemption reference** for that anonymous ID
+
+We do **not** store workout content, emails, or names on our servers.
 
 ### What we do not delete through this request
 
-- **Google Play** or **App Store** purchase and billing records — manage or cancel subscriptions in your store account (**Google Play** → **Payments & subscriptions**).
-- **Analytics and crash** data already collected by **Google Firebase** or **AdMob** — turn off future collection in **Settings** → **Privacy & legal** → **Usage analytics**, and see [Google’s privacy tools](https://policies.google.com/privacy).
+- **Google Play** or **App Store** purchase and billing records — cancel in your store account.
+- **Analytics and crash** data held by **Google Firebase** or **AdMob** — turn off future collection in **Settings** → **Privacy & legal** → **Usage analytics**.
 
-## 3. Delete some data without deleting your account
-
-You can remove or limit data without closing your Firebase account:
+## 4. Delete or limit data without a full request
 
 | Data | How to remove or limit it |
 |------|---------------------------|
 | Local workouts and plans | Delete in the app or uninstall |
+| Online premium/promo mirror | **Settings** → **Privacy & legal** → **Delete online data** |
 | Usage analytics | **Settings** → **Privacy & legal** → turn off **Usage analytics** |
-| Ads personalization | Use Google’s ad privacy options when offered in the app or device settings |
-| Premium subscription | Cancel in **Google Play** or **App Store**; premium features stop when the subscription ends |
-| Cloud backup only | Email us to delete Firestore backups while keeping sign-in (same contact as above) |
-
-## 4. Coach–client linking
-
-If you are linked as a **coach** or **client**:
-
-- **Client (mentee):** revoke the coach in **Settings** → **Account** before or as part of your deletion request.
-- **Coach:** disconnect linked clients from **Settings** → **Training accounts**, then request account deletion if needed.
-
-Local copies on each device remain until deleted in the app or the app is uninstalled.
+| Ads personalization | Google ad privacy options in Settings or device settings |
+| Premium subscription | Cancel in **Google Play** or **App Store** |
 
 ## 5. Questions
 
-For help with deletion or privacy: [turslv18@gmail.com](mailto:turslv18@gmail.com)
+[turslv18@gmail.com](mailto:turslv18@gmail.com)
 
 See also: [Privacy Policy](privacy-policy.md) · [Terms of Service](terms-of-service.md)
